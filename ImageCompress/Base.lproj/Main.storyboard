@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" tag="10000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5d-5e-1Xe">
+                                <rect key="frame" x="157" y="111" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Epa-J6-N2g"/>
+                                </constraints>
+                                <state key="normal" title="拍照"/>
+                                <connections>
+                                    <action selector="photoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Ki-4c-G6E"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g4f-Nw-l0D">
+                                <rect key="frame" x="140" y="215" width="134" height="161"/>
+                            </imageView>
+                            <button opaque="NO" tag="10001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJc-9k-i6U">
+                                <rect key="frame" x="157" y="165" width="100" height="30"/>
+                                <state key="normal" title="打开相册"/>
+                                <connections>
+                                    <action selector="photoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1fO-rv-Pcl"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1EO-Sf-QmO">
+                                <rect key="frame" x="0.0" y="436" width="134.5" height="161.5"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1EO-Sf-QmO" secondAttribute="height" multiplier="200:240" id="rZ0-VT-Mnw"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="30U-Of-Mnc" appends="YES" id="zi5-oz-aYp"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nYZ-PO-aer">
+                                <rect key="frame" x="17" y="386" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="MwW-yX-Ywh"/>
+                                </constraints>
+                                <state key="normal" title="二分压缩"/>
+                                <connections>
+                                    <action selector="compressImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wvV-c1-ilc"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2fr-cR-o9b">
+                                <rect key="frame" x="140.5" y="436" width="134" height="161.5"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Nnj-Q0-9qk" appends="YES" id="qEe-Yw-JG0"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="caK-iX-QVa">
+                                <rect key="frame" x="279.5" y="436" width="134.5" height="161.5"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="GMQ-5Z-6hn" appends="YES" id="9GW-0k-wS7"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gXB-6k-vhD">
+                                <rect key="frame" x="157.5" y="386" width="100" height="30"/>
+                                <state key="normal" title="luban压缩"/>
+                                <connections>
+                                    <action selector="lubanCompress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Pc-DN-OKB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIB-Wm-Bzw">
+                                <rect key="frame" x="297" y="386" width="100" height="30"/>
+                                <state key="normal" title="WX压缩"/>
+                                <connections>
+                                    <action selector="WXCompress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fgk-Ok-Xa0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gXB-6k-vhD" firstAttribute="top" secondItem="nYZ-PO-aer" secondAttribute="top" id="0UG-TD-veb"/>
+                            <constraint firstItem="gXB-6k-vhD" firstAttribute="width" secondItem="nYZ-PO-aer" secondAttribute="width" id="1ex-WM-HAU"/>
+                            <constraint firstItem="nYZ-PO-aer" firstAttribute="centerX" secondItem="1EO-Sf-QmO" secondAttribute="centerX" id="6x9-AW-N52"/>
+                            <constraint firstItem="nYZ-PO-aer" firstAttribute="top" secondItem="g4f-Nw-l0D" secondAttribute="bottom" constant="10" id="Ahz-hT-iNg"/>
+                            <constraint firstItem="N5d-5e-1Xe" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="CfO-Y4-MJW"/>
+                            <constraint firstItem="2fr-cR-o9b" firstAttribute="top" secondItem="1EO-Sf-QmO" secondAttribute="top" id="DXC-bP-H6g"/>
+                            <constraint firstItem="caK-iX-QVa" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="MSg-rw-Jxg"/>
+                            <constraint firstItem="NIB-Wm-Bzw" firstAttribute="centerX" secondItem="caK-iX-QVa" secondAttribute="centerX" id="NKp-t5-1um"/>
+                            <constraint firstItem="XJc-9k-i6U" firstAttribute="height" secondItem="N5d-5e-1Xe" secondAttribute="height" id="Qym-lT-Ms4"/>
+                            <constraint firstItem="XJc-9k-i6U" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="121" id="RU2-o8-1S0"/>
+                            <constraint firstItem="1EO-Sf-QmO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XSH-KL-fu4"/>
+                            <constraint firstItem="2fr-cR-o9b" firstAttribute="height" secondItem="1EO-Sf-QmO" secondAttribute="height" id="aBx-Gh-DEe"/>
+                            <constraint firstItem="2fr-cR-o9b" firstAttribute="leading" secondItem="1EO-Sf-QmO" secondAttribute="trailing" constant="6" id="asd-oL-AQz"/>
+                            <constraint firstItem="NIB-Wm-Bzw" firstAttribute="top" secondItem="gXB-6k-vhD" secondAttribute="top" id="ccp-Nu-5se"/>
+                            <constraint firstItem="caK-iX-QVa" firstAttribute="height" secondItem="2fr-cR-o9b" secondAttribute="height" id="cxb-Yi-Hfb"/>
+                            <constraint firstItem="caK-iX-QVa" firstAttribute="top" secondItem="2fr-cR-o9b" secondAttribute="top" id="fMf-BK-Vu3"/>
+                            <constraint firstItem="1EO-Sf-QmO" firstAttribute="top" secondItem="g4f-Nw-l0D" secondAttribute="bottom" constant="60" id="fvu-X1-aQD"/>
+                            <constraint firstItem="XJc-9k-i6U" firstAttribute="width" secondItem="N5d-5e-1Xe" secondAttribute="width" id="hyg-g6-nur"/>
+                            <constraint firstItem="g4f-Nw-l0D" firstAttribute="top" secondItem="XJc-9k-i6U" secondAttribute="bottom" constant="20" id="lj9-XR-FEw"/>
+                            <constraint firstItem="2fr-cR-o9b" firstAttribute="width" secondItem="caK-iX-QVa" secondAttribute="width" id="nQX-rO-XeA"/>
+                            <constraint firstItem="caK-iX-QVa" firstAttribute="leading" secondItem="2fr-cR-o9b" secondAttribute="trailing" constant="5" id="p8q-Wg-qEc"/>
+                            <constraint firstItem="XJc-9k-i6U" firstAttribute="leading" secondItem="N5d-5e-1Xe" secondAttribute="leading" id="pOV-pv-Gpw"/>
+                            <constraint firstItem="g4f-Nw-l0D" firstAttribute="width" secondItem="1EO-Sf-QmO" secondAttribute="width" id="qPR-ox-r76"/>
+                            <constraint firstItem="2fr-cR-o9b" firstAttribute="width" secondItem="1EO-Sf-QmO" secondAttribute="width" id="rUA-ct-Muf"/>
+                            <constraint firstItem="g4f-Nw-l0D" firstAttribute="height" secondItem="1EO-Sf-QmO" secondAttribute="height" id="syj-OX-wxc"/>
+                            <constraint firstItem="g4f-Nw-l0D" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="tTc-90-Orq"/>
+                            <constraint firstItem="gXB-6k-vhD" firstAttribute="centerX" secondItem="2fr-cR-o9b" secondAttribute="centerX" id="uOi-cY-aMH"/>
+                            <constraint firstItem="NIB-Wm-Bzw" firstAttribute="width" secondItem="gXB-6k-vhD" secondAttribute="width" id="zZv-12-O62"/>
+                            <constraint firstItem="N5d-5e-1Xe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="67" id="zsF-YU-X8Z"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="kaH-xJ-F1L"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="WXImageView" destination="caK-iX-QVa" id="NoF-cP-QOa"/>
+                        <outlet property="compressImageView" destination="1EO-Sf-QmO" id="cKh-f0-iOQ"/>
+                        <outlet property="imageView" destination="g4f-Nw-l0D" id="uza-d8-kwC"/>
+                        <outlet property="lubanImageView" destination="2fr-cR-o9b" id="8ob-I8-Wbj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="30U-Of-Mnc">
+                    <connections>
+                        <action selector="erFenCompress:" destination="BYZ-38-t0r" id="3wC-oP-ott"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Nnj-Q0-9qk">
+                    <connections>
+                        <action selector="lubanC:" destination="BYZ-38-t0r" id="HWr-a0-mVB"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="GMQ-5Z-6hn">
+                    <connections>
+                        <action selector="WXC:" destination="BYZ-38-t0r" id="HNs-mN-tge"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+        </scene>
+        <!--Photo Browser View Controller-->
+        <scene sceneID="Dzc-gS-9ws">
+            <objects>
+                <viewController storyboardIdentifier="PhotoBrowserViewController" id="qjW-c5-Ue7" customClass="PhotoBrowserViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mA8-vS-js7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="PhotoBrowserViewController" translatesAutoresizingMaskIntoConstraints="NO" id="LVl-GQ-JHq">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="gzX-yK-jOc" appends="YES" id="13k-iH-5KH"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Dym-Gh-Y16" firstAttribute="trailing" secondItem="LVl-GQ-JHq" secondAttribute="trailing" id="At7-zD-wSU"/>
+                            <constraint firstItem="LVl-GQ-JHq" firstAttribute="leading" secondItem="Dym-Gh-Y16" secondAttribute="leading" id="F89-Y1-q2B"/>
+                            <constraint firstItem="LVl-GQ-JHq" firstAttribute="top" secondItem="Dym-Gh-Y16" secondAttribute="top" id="KDZ-ev-n2c"/>
+                            <constraint firstItem="Dym-Gh-Y16" firstAttribute="bottom" secondItem="LVl-GQ-JHq" secondAttribute="bottom" id="xpg-xw-3HL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Dym-Gh-Y16"/>
+                    </view>
+                    <connections>
+                        <outlet property="browserImageView" destination="LVl-GQ-JHq" id="n94-c0-iHp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0mz-dV-Ag5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="gzX-yK-jOc">
+                    <connections>
+                        <action selector="tapView:" destination="qjW-c5-Ue7" id="TI6-OV-3wH"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1326" y="52"/>
+        </scene>
+    </scenes>
+</document>

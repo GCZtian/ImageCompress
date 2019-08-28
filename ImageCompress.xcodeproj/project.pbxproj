@@ -1,0 +1,760 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		225E4BD52314FE3E00C5443B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 225E4BD42314FE3E00C5443B /* AppDelegate.m */; };
+		225E4BD82314FE3E00C5443B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 225E4BD72314FE3E00C5443B /* ViewController.m */; };
+		225E4BDB2314FE3E00C5443B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 225E4BD92314FE3E00C5443B /* Main.storyboard */; };
+		225E4BDD2314FE4100C5443B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 225E4BDC2314FE4100C5443B /* Assets.xcassets */; };
+		225E4BE02314FE4100C5443B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 225E4BDE2314FE4100C5443B /* LaunchScreen.storyboard */; };
+		225E4BE32314FE4100C5443B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 225E4BE22314FE4100C5443B /* main.m */; };
+		225E4BED2314FE4200C5443B /* ImageCompressTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 225E4BEC2314FE4200C5443B /* ImageCompressTests.m */; };
+		225E4BF82314FE4300C5443B /* ImageCompressUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 225E4BF72314FE4300C5443B /* ImageCompressUITests.m */; };
+		225E4C06231619E300C5443B /* IMG_0594.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 225E4C05231619E200C5443B /* IMG_0594.PNG */; };
+		225E4C0823161A1D00C5443B /* 20404ec8f520850a1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 225E4C0723161A1D00C5443B /* 20404ec8f520850a1.jpg */; };
+		225E4C0A23161A2A00C5443B /* 1511874948163.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 225E4C0923161A2A00C5443B /* 1511874948163.jpg */; };
+		225E4C0C23161AE600C5443B /* 中通万家-操作平台改.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 225E4C0B23161AE600C5443B /* 中通万家-操作平台改.jpg */; };
+		225E4C0E23161CF900C5443B /* IMG_9165.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 225E4C0D23161CF800C5443B /* IMG_9165.JPG */; };
+		225E4C1023161D2E00C5443B /* IMG_5005.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 225E4C0F23161D2E00C5443B /* IMG_5005.JPG */; };
+		229E5D6523164F0D00E3F819 /* IMG_9698.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 229E5D6423164F0D00E3F819 /* IMG_9698.JPG */; };
+		229E5D682316607500E3F819 /* UIImage+Luban_iOS_Extension_h.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E5D662316607500E3F819 /* UIImage+Luban_iOS_Extension_h.m */; };
+		229E5D7A231670A300E3F819 /* PhotoBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E5D78231670A300E3F819 /* PhotoBrowserViewController.m */; };
+		229E5D80231679F600E3F819 /* UIImage+WXImageCompress.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E5D7F231679F600E3F819 /* UIImage+WXImageCompress.m */; };
+		3277756746792ACF3E37666A /* Pods_ImageCompress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89A8FFA4444A6B56E350E86 /* Pods_ImageCompress.framework */; };
+		37CD96257A6119A96812F865 /* Pods_ImageCompressUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6510F141419C52F80CBCAFC9 /* Pods_ImageCompressUITests.framework */; };
+		4593AA335ADD34F930D295D0 /* Pods_ImageCompressTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF86F1788731423FD218569B /* Pods_ImageCompressTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		225E4BE92314FE4200C5443B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 225E4BC82314FE3E00C5443B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 225E4BCF2314FE3E00C5443B;
+			remoteInfo = ImageCompress;
+		};
+		225E4BF42314FE4300C5443B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 225E4BC82314FE3E00C5443B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 225E4BCF2314FE3E00C5443B;
+			remoteInfo = ImageCompress;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0FF561218AD8EE594AD2F57E /* Pods-ImageCompress.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageCompress.release.xcconfig"; path = "Target Support Files/Pods-ImageCompress/Pods-ImageCompress.release.xcconfig"; sourceTree = "<group>"; };
+		225E4BD02314FE3E00C5443B /* ImageCompress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageCompress.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		225E4BD32314FE3E00C5443B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		225E4BD42314FE3E00C5443B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		225E4BD62314FE3E00C5443B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		225E4BD72314FE3E00C5443B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		225E4BDA2314FE3E00C5443B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		225E4BDC2314FE4100C5443B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		225E4BDF2314FE4100C5443B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		225E4BE12314FE4100C5443B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		225E4BE22314FE4100C5443B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		225E4BE82314FE4200C5443B /* ImageCompressTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageCompressTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		225E4BEC2314FE4200C5443B /* ImageCompressTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageCompressTests.m; sourceTree = "<group>"; };
+		225E4BEE2314FE4200C5443B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		225E4BF32314FE4300C5443B /* ImageCompressUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageCompressUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		225E4BF72314FE4300C5443B /* ImageCompressUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageCompressUITests.m; sourceTree = "<group>"; };
+		225E4BF92314FE4300C5443B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		225E4C05231619E200C5443B /* IMG_0594.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_0594.PNG; sourceTree = "<group>"; };
+		225E4C0723161A1D00C5443B /* 20404ec8f520850a1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 20404ec8f520850a1.jpg; sourceTree = "<group>"; };
+		225E4C0923161A2A00C5443B /* 1511874948163.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1511874948163.jpg; sourceTree = "<group>"; };
+		225E4C0B23161AE600C5443B /* 中通万家-操作平台改.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "中通万家-操作平台改.jpg"; sourceTree = "<group>"; };
+		225E4C0D23161CF800C5443B /* IMG_9165.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_9165.JPG; sourceTree = "<group>"; };
+		225E4C0F23161D2E00C5443B /* IMG_5005.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_5005.JPG; sourceTree = "<group>"; };
+		229E5D6423164F0D00E3F819 /* IMG_9698.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_9698.JPG; sourceTree = "<group>"; };
+		229E5D662316607500E3F819 /* UIImage+Luban_iOS_Extension_h.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Luban_iOS_Extension_h.m"; sourceTree = "<group>"; };
+		229E5D672316607500E3F819 /* UIImage+Luban_iOS_Extension_h.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Luban_iOS_Extension_h.h"; sourceTree = "<group>"; };
+		229E5D69231660A600E3F819 /* ImageCompress-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImageCompress-Bridging-Header.h"; sourceTree = "<group>"; };
+		229E5D77231670A300E3F819 /* PhotoBrowserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoBrowserViewController.h; sourceTree = "<group>"; };
+		229E5D78231670A300E3F819 /* PhotoBrowserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoBrowserViewController.m; sourceTree = "<group>"; };
+		229E5D7E231679F600E3F819 /* UIImage+WXImageCompress.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+WXImageCompress.h"; sourceTree = "<group>"; };
+		229E5D7F231679F600E3F819 /* UIImage+WXImageCompress.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WXImageCompress.m"; sourceTree = "<group>"; };
+		22ADE9039DC3F38724A9CB0A /* Pods-ImageCompressTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageCompressTests.debug.xcconfig"; path = "Target Support Files/Pods-ImageCompressTests/Pods-ImageCompressTests.debug.xcconfig"; sourceTree = "<group>"; };
+		421BE2BD6CF81DFEE63049DA /* Pods-ImageCompressUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageCompressUITests.release.xcconfig"; path = "Target Support Files/Pods-ImageCompressUITests/Pods-ImageCompressUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6510F141419C52F80CBCAFC9 /* Pods_ImageCompressUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageCompressUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		92DDD7A9A23A24A77201061A /* Pods-ImageCompressUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageCompressUITests.debug.xcconfig"; path = "Target Support Files/Pods-ImageCompressUITests/Pods-ImageCompressUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		A89A8FFA4444A6B56E350E86 /* Pods_ImageCompress.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageCompress.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8DA3B679338F66BB8BC548A /* Pods-ImageCompress.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageCompress.debug.xcconfig"; path = "Target Support Files/Pods-ImageCompress/Pods-ImageCompress.debug.xcconfig"; sourceTree = "<group>"; };
+		DF86F1788731423FD218569B /* Pods_ImageCompressTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageCompressTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3B5BACCB95EF0853B9E53F4 /* Pods-ImageCompressTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageCompressTests.release.xcconfig"; path = "Target Support Files/Pods-ImageCompressTests/Pods-ImageCompressTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		225E4BCD2314FE3E00C5443B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3277756746792ACF3E37666A /* Pods_ImageCompress.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		225E4BE52314FE4200C5443B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4593AA335ADD34F930D295D0 /* Pods_ImageCompressTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		225E4BF02314FE4300C5443B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37CD96257A6119A96812F865 /* Pods_ImageCompressUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1492DED77EAA3179266268E7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A8DA3B679338F66BB8BC548A /* Pods-ImageCompress.debug.xcconfig */,
+				0FF561218AD8EE594AD2F57E /* Pods-ImageCompress.release.xcconfig */,
+				22ADE9039DC3F38724A9CB0A /* Pods-ImageCompressTests.debug.xcconfig */,
+				F3B5BACCB95EF0853B9E53F4 /* Pods-ImageCompressTests.release.xcconfig */,
+				92DDD7A9A23A24A77201061A /* Pods-ImageCompressUITests.debug.xcconfig */,
+				421BE2BD6CF81DFEE63049DA /* Pods-ImageCompressUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		225E4BC72314FE3E00C5443B = {
+			isa = PBXGroup;
+			children = (
+				225E4BD22314FE3E00C5443B /* ImageCompress */,
+				225E4BEB2314FE4200C5443B /* ImageCompressTests */,
+				225E4BF62314FE4300C5443B /* ImageCompressUITests */,
+				225E4BD12314FE3E00C5443B /* Products */,
+				1492DED77EAA3179266268E7 /* Pods */,
+				C2D379A7E9EA8AAA2F841E30 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		225E4BD12314FE3E00C5443B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				225E4BD02314FE3E00C5443B /* ImageCompress.app */,
+				225E4BE82314FE4200C5443B /* ImageCompressTests.xctest */,
+				225E4BF32314FE4300C5443B /* ImageCompressUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		225E4BD22314FE3E00C5443B /* ImageCompress */ = {
+			isa = PBXGroup;
+			children = (
+				225E4BD32314FE3E00C5443B /* AppDelegate.h */,
+				225E4BD42314FE3E00C5443B /* AppDelegate.m */,
+				225E4BD62314FE3E00C5443B /* ViewController.h */,
+				225E4BD72314FE3E00C5443B /* ViewController.m */,
+				229E5D77231670A300E3F819 /* PhotoBrowserViewController.h */,
+				229E5D78231670A300E3F819 /* PhotoBrowserViewController.m */,
+				229E5D672316607500E3F819 /* UIImage+Luban_iOS_Extension_h.h */,
+				229E5D662316607500E3F819 /* UIImage+Luban_iOS_Extension_h.m */,
+				229E5D7E231679F600E3F819 /* UIImage+WXImageCompress.h */,
+				229E5D7F231679F600E3F819 /* UIImage+WXImageCompress.m */,
+				225E4BD92314FE3E00C5443B /* Main.storyboard */,
+				225E4BDC2314FE4100C5443B /* Assets.xcassets */,
+				225E4C0B23161AE600C5443B /* 中通万家-操作平台改.jpg */,
+				225E4C05231619E200C5443B /* IMG_0594.PNG */,
+				225E4C0D23161CF800C5443B /* IMG_9165.JPG */,
+				229E5D6423164F0D00E3F819 /* IMG_9698.JPG */,
+				225E4C0F23161D2E00C5443B /* IMG_5005.JPG */,
+				225E4C0723161A1D00C5443B /* 20404ec8f520850a1.jpg */,
+				225E4C0923161A2A00C5443B /* 1511874948163.jpg */,
+				225E4BDE2314FE4100C5443B /* LaunchScreen.storyboard */,
+				225E4BE12314FE4100C5443B /* Info.plist */,
+				225E4BE22314FE4100C5443B /* main.m */,
+				229E5D69231660A600E3F819 /* ImageCompress-Bridging-Header.h */,
+			);
+			path = ImageCompress;
+			sourceTree = "<group>";
+		};
+		225E4BEB2314FE4200C5443B /* ImageCompressTests */ = {
+			isa = PBXGroup;
+			children = (
+				225E4BEC2314FE4200C5443B /* ImageCompressTests.m */,
+				225E4BEE2314FE4200C5443B /* Info.plist */,
+			);
+			path = ImageCompressTests;
+			sourceTree = "<group>";
+		};
+		225E4BF62314FE4300C5443B /* ImageCompressUITests */ = {
+			isa = PBXGroup;
+			children = (
+				225E4BF72314FE4300C5443B /* ImageCompressUITests.m */,
+				225E4BF92314FE4300C5443B /* Info.plist */,
+			);
+			path = ImageCompressUITests;
+			sourceTree = "<group>";
+		};
+		C2D379A7E9EA8AAA2F841E30 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A89A8FFA4444A6B56E350E86 /* Pods_ImageCompress.framework */,
+				DF86F1788731423FD218569B /* Pods_ImageCompressTests.framework */,
+				6510F141419C52F80CBCAFC9 /* Pods_ImageCompressUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		225E4BCF2314FE3E00C5443B /* ImageCompress */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 225E4BFC2314FE4300C5443B /* Build configuration list for PBXNativeTarget "ImageCompress" */;
+			buildPhases = (
+				53BE3370B8A21D5E3BAAAAFB /* [CP] Check Pods Manifest.lock */,
+				225E4BCC2314FE3E00C5443B /* Sources */,
+				225E4BCD2314FE3E00C5443B /* Frameworks */,
+				225E4BCE2314FE3E00C5443B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ImageCompress;
+			productName = ImageCompress;
+			productReference = 225E4BD02314FE3E00C5443B /* ImageCompress.app */;
+			productType = "com.apple.product-type.application";
+		};
+		225E4BE72314FE4200C5443B /* ImageCompressTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 225E4BFF2314FE4300C5443B /* Build configuration list for PBXNativeTarget "ImageCompressTests" */;
+			buildPhases = (
+				BF7C4E5CE08397F76D8FACBA /* [CP] Check Pods Manifest.lock */,
+				225E4BE42314FE4200C5443B /* Sources */,
+				225E4BE52314FE4200C5443B /* Frameworks */,
+				225E4BE62314FE4200C5443B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				225E4BEA2314FE4200C5443B /* PBXTargetDependency */,
+			);
+			name = ImageCompressTests;
+			productName = ImageCompressTests;
+			productReference = 225E4BE82314FE4200C5443B /* ImageCompressTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		225E4BF22314FE4300C5443B /* ImageCompressUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 225E4C022314FE4300C5443B /* Build configuration list for PBXNativeTarget "ImageCompressUITests" */;
+			buildPhases = (
+				6D6044D3A78CF1FEFA8D6D96 /* [CP] Check Pods Manifest.lock */,
+				225E4BEF2314FE4300C5443B /* Sources */,
+				225E4BF02314FE4300C5443B /* Frameworks */,
+				225E4BF12314FE4300C5443B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				225E4BF52314FE4300C5443B /* PBXTargetDependency */,
+			);
+			name = ImageCompressUITests;
+			productName = ImageCompressUITests;
+			productReference = 225E4BF32314FE4300C5443B /* ImageCompressUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		225E4BC82314FE3E00C5443B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "龚潮中";
+				TargetAttributes = {
+					225E4BCF2314FE3E00C5443B = {
+						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
+					};
+					225E4BE72314FE4200C5443B = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 225E4BCF2314FE3E00C5443B;
+					};
+					225E4BF22314FE4300C5443B = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 225E4BCF2314FE3E00C5443B;
+					};
+				};
+			};
+			buildConfigurationList = 225E4BCB2314FE3E00C5443B /* Build configuration list for PBXProject "ImageCompress" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 225E4BC72314FE3E00C5443B;
+			productRefGroup = 225E4BD12314FE3E00C5443B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				225E4BCF2314FE3E00C5443B /* ImageCompress */,
+				225E4BE72314FE4200C5443B /* ImageCompressTests */,
+				225E4BF22314FE4300C5443B /* ImageCompressUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		225E4BCE2314FE3E00C5443B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				225E4C0823161A1D00C5443B /* 20404ec8f520850a1.jpg in Resources */,
+				229E5D6523164F0D00E3F819 /* IMG_9698.JPG in Resources */,
+				225E4C0C23161AE600C5443B /* 中通万家-操作平台改.jpg in Resources */,
+				225E4C1023161D2E00C5443B /* IMG_5005.JPG in Resources */,
+				225E4BE02314FE4100C5443B /* LaunchScreen.storyboard in Resources */,
+				225E4C0A23161A2A00C5443B /* 1511874948163.jpg in Resources */,
+				225E4C0E23161CF900C5443B /* IMG_9165.JPG in Resources */,
+				225E4C06231619E300C5443B /* IMG_0594.PNG in Resources */,
+				225E4BDD2314FE4100C5443B /* Assets.xcassets in Resources */,
+				225E4BDB2314FE3E00C5443B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		225E4BE62314FE4200C5443B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		225E4BF12314FE4300C5443B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		53BE3370B8A21D5E3BAAAAFB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ImageCompress-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D6044D3A78CF1FEFA8D6D96 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ImageCompressUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF7C4E5CE08397F76D8FACBA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ImageCompressTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		225E4BCC2314FE3E00C5443B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				229E5D7A231670A300E3F819 /* PhotoBrowserViewController.m in Sources */,
+				225E4BD82314FE3E00C5443B /* ViewController.m in Sources */,
+				229E5D682316607500E3F819 /* UIImage+Luban_iOS_Extension_h.m in Sources */,
+				225E4BE32314FE4100C5443B /* main.m in Sources */,
+				229E5D80231679F600E3F819 /* UIImage+WXImageCompress.m in Sources */,
+				225E4BD52314FE3E00C5443B /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		225E4BE42314FE4200C5443B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				225E4BED2314FE4200C5443B /* ImageCompressTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		225E4BEF2314FE4300C5443B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				225E4BF82314FE4300C5443B /* ImageCompressUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		225E4BEA2314FE4200C5443B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 225E4BCF2314FE3E00C5443B /* ImageCompress */;
+			targetProxy = 225E4BE92314FE4200C5443B /* PBXContainerItemProxy */;
+		};
+		225E4BF52314FE4300C5443B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 225E4BCF2314FE3E00C5443B /* ImageCompress */;
+			targetProxy = 225E4BF42314FE4300C5443B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		225E4BD92314FE3E00C5443B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				225E4BDA2314FE3E00C5443B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		225E4BDE2314FE4100C5443B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				225E4BDF2314FE4100C5443B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		225E4BFA2314FE4300C5443B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		225E4BFB2314FE4300C5443B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		225E4BFD2314FE4300C5443B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8DA3B679338F66BB8BC548A /* Pods-ImageCompress.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7XTNH83NFD;
+				INFOPLIST_FILE = ImageCompress/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zto.ImageCompress;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ImageCompress/ImageCompress-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		225E4BFE2314FE4300C5443B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FF561218AD8EE594AD2F57E /* Pods-ImageCompress.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7XTNH83NFD;
+				INFOPLIST_FILE = ImageCompress/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zto.ImageCompress;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ImageCompress/ImageCompress-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		225E4C002314FE4300C5443B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22ADE9039DC3F38724A9CB0A /* Pods-ImageCompressTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ImageCompressTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zto.ImageCompressTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageCompress.app/ImageCompress";
+			};
+			name = Debug;
+		};
+		225E4C012314FE4300C5443B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3B5BACCB95EF0853B9E53F4 /* Pods-ImageCompressTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ImageCompressTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zto.ImageCompressTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ImageCompress.app/ImageCompress";
+			};
+			name = Release;
+		};
+		225E4C032314FE4300C5443B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92DDD7A9A23A24A77201061A /* Pods-ImageCompressUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ImageCompressUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zto.ImageCompressUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ImageCompress;
+			};
+			name = Debug;
+		};
+		225E4C042314FE4300C5443B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 421BE2BD6CF81DFEE63049DA /* Pods-ImageCompressUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ImageCompressUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zto.ImageCompressUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ImageCompress;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		225E4BCB2314FE3E00C5443B /* Build configuration list for PBXProject "ImageCompress" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				225E4BFA2314FE4300C5443B /* Debug */,
+				225E4BFB2314FE4300C5443B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		225E4BFC2314FE4300C5443B /* Build configuration list for PBXNativeTarget "ImageCompress" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				225E4BFD2314FE4300C5443B /* Debug */,
+				225E4BFE2314FE4300C5443B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		225E4BFF2314FE4300C5443B /* Build configuration list for PBXNativeTarget "ImageCompressTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				225E4C002314FE4300C5443B /* Debug */,
+				225E4C012314FE4300C5443B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		225E4C022314FE4300C5443B /* Build configuration list for PBXNativeTarget "ImageCompressUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				225E4C032314FE4300C5443B /* Debug */,
+				225E4C042314FE4300C5443B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 225E4BC82314FE3E00C5443B /* Project object */;
+}
