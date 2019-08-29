@@ -15,16 +15,9 @@
 		225E4BE32314FE4100C5443B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 225E4BE22314FE4100C5443B /* main.m */; };
 		225E4BED2314FE4200C5443B /* ImageCompressTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 225E4BEC2314FE4200C5443B /* ImageCompressTests.m */; };
 		225E4BF82314FE4300C5443B /* ImageCompressUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 225E4BF72314FE4300C5443B /* ImageCompressUITests.m */; };
-		225E4C06231619E300C5443B /* IMG_0594.PNG in Resources */ = {isa = PBXBuildFile; fileRef = 225E4C05231619E200C5443B /* IMG_0594.PNG */; };
-		225E4C0823161A1D00C5443B /* 20404ec8f520850a1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 225E4C0723161A1D00C5443B /* 20404ec8f520850a1.jpg */; };
-		225E4C0A23161A2A00C5443B /* 1511874948163.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 225E4C0923161A2A00C5443B /* 1511874948163.jpg */; };
-		225E4C0C23161AE600C5443B /* 中通万家-操作平台改.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 225E4C0B23161AE600C5443B /* 中通万家-操作平台改.jpg */; };
-		225E4C0E23161CF900C5443B /* IMG_9165.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 225E4C0D23161CF800C5443B /* IMG_9165.JPG */; };
-		225E4C1023161D2E00C5443B /* IMG_5005.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 225E4C0F23161D2E00C5443B /* IMG_5005.JPG */; };
-		229E5D6523164F0D00E3F819 /* IMG_9698.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 229E5D6423164F0D00E3F819 /* IMG_9698.JPG */; };
-		229E5D682316607500E3F819 /* UIImage+Luban_iOS_Extension_h.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E5D662316607500E3F819 /* UIImage+Luban_iOS_Extension_h.m */; };
 		229E5D7A231670A300E3F819 /* PhotoBrowserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E5D78231670A300E3F819 /* PhotoBrowserViewController.m */; };
 		229E5D80231679F600E3F819 /* UIImage+WXImageCompress.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E5D7F231679F600E3F819 /* UIImage+WXImageCompress.m */; };
+		229E5DC12317A31E00E3F819 /* UIImage+ImageCompress.m in Sources */ = {isa = PBXBuildFile; fileRef = 229E5DC02317A31E00E3F819 /* UIImage+ImageCompress.m */; };
 		3277756746792ACF3E37666A /* Pods_ImageCompress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89A8FFA4444A6B56E350E86 /* Pods_ImageCompress.framework */; };
 		37CD96257A6119A96812F865 /* Pods_ImageCompressUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6510F141419C52F80CBCAFC9 /* Pods_ImageCompressUITests.framework */; };
 		4593AA335ADD34F930D295D0 /* Pods_ImageCompressTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF86F1788731423FD218569B /* Pods_ImageCompressTests.framework */; };
@@ -65,20 +58,12 @@
 		225E4BF32314FE4300C5443B /* ImageCompressUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImageCompressUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		225E4BF72314FE4300C5443B /* ImageCompressUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageCompressUITests.m; sourceTree = "<group>"; };
 		225E4BF92314FE4300C5443B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		225E4C05231619E200C5443B /* IMG_0594.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_0594.PNG; sourceTree = "<group>"; };
-		225E4C0723161A1D00C5443B /* 20404ec8f520850a1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 20404ec8f520850a1.jpg; sourceTree = "<group>"; };
-		225E4C0923161A2A00C5443B /* 1511874948163.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1511874948163.jpg; sourceTree = "<group>"; };
-		225E4C0B23161AE600C5443B /* 中通万家-操作平台改.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "中通万家-操作平台改.jpg"; sourceTree = "<group>"; };
-		225E4C0D23161CF800C5443B /* IMG_9165.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_9165.JPG; sourceTree = "<group>"; };
-		225E4C0F23161D2E00C5443B /* IMG_5005.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_5005.JPG; sourceTree = "<group>"; };
-		229E5D6423164F0D00E3F819 /* IMG_9698.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_9698.JPG; sourceTree = "<group>"; };
-		229E5D662316607500E3F819 /* UIImage+Luban_iOS_Extension_h.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Luban_iOS_Extension_h.m"; sourceTree = "<group>"; };
-		229E5D672316607500E3F819 /* UIImage+Luban_iOS_Extension_h.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Luban_iOS_Extension_h.h"; sourceTree = "<group>"; };
-		229E5D69231660A600E3F819 /* ImageCompress-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImageCompress-Bridging-Header.h"; sourceTree = "<group>"; };
 		229E5D77231670A300E3F819 /* PhotoBrowserViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoBrowserViewController.h; sourceTree = "<group>"; };
 		229E5D78231670A300E3F819 /* PhotoBrowserViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoBrowserViewController.m; sourceTree = "<group>"; };
 		229E5D7E231679F600E3F819 /* UIImage+WXImageCompress.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+WXImageCompress.h"; sourceTree = "<group>"; };
 		229E5D7F231679F600E3F819 /* UIImage+WXImageCompress.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WXImageCompress.m"; sourceTree = "<group>"; };
+		229E5DBF2317A31E00E3F819 /* UIImage+ImageCompress.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageCompress.h"; sourceTree = "<group>"; };
+		229E5DC02317A31E00E3F819 /* UIImage+ImageCompress.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageCompress.m"; sourceTree = "<group>"; };
 		22ADE9039DC3F38724A9CB0A /* Pods-ImageCompressTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageCompressTests.debug.xcconfig"; path = "Target Support Files/Pods-ImageCompressTests/Pods-ImageCompressTests.debug.xcconfig"; sourceTree = "<group>"; };
 		421BE2BD6CF81DFEE63049DA /* Pods-ImageCompressUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageCompressUITests.release.xcconfig"; path = "Target Support Files/Pods-ImageCompressUITests/Pods-ImageCompressUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6510F141419C52F80CBCAFC9 /* Pods_ImageCompressUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageCompressUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,23 +146,15 @@
 				225E4BD72314FE3E00C5443B /* ViewController.m */,
 				229E5D77231670A300E3F819 /* PhotoBrowserViewController.h */,
 				229E5D78231670A300E3F819 /* PhotoBrowserViewController.m */,
-				229E5D672316607500E3F819 /* UIImage+Luban_iOS_Extension_h.h */,
-				229E5D662316607500E3F819 /* UIImage+Luban_iOS_Extension_h.m */,
 				229E5D7E231679F600E3F819 /* UIImage+WXImageCompress.h */,
 				229E5D7F231679F600E3F819 /* UIImage+WXImageCompress.m */,
+				229E5DBF2317A31E00E3F819 /* UIImage+ImageCompress.h */,
+				229E5DC02317A31E00E3F819 /* UIImage+ImageCompress.m */,
 				225E4BD92314FE3E00C5443B /* Main.storyboard */,
 				225E4BDC2314FE4100C5443B /* Assets.xcassets */,
-				225E4C0B23161AE600C5443B /* 中通万家-操作平台改.jpg */,
-				225E4C05231619E200C5443B /* IMG_0594.PNG */,
-				225E4C0D23161CF800C5443B /* IMG_9165.JPG */,
-				229E5D6423164F0D00E3F819 /* IMG_9698.JPG */,
-				225E4C0F23161D2E00C5443B /* IMG_5005.JPG */,
-				225E4C0723161A1D00C5443B /* 20404ec8f520850a1.jpg */,
-				225E4C0923161A2A00C5443B /* 1511874948163.jpg */,
 				225E4BDE2314FE4100C5443B /* LaunchScreen.storyboard */,
 				225E4BE12314FE4100C5443B /* Info.plist */,
 				225E4BE22314FE4100C5443B /* main.m */,
-				229E5D69231660A600E3F819 /* ImageCompress-Bridging-Header.h */,
 			);
 			path = ImageCompress;
 			sourceTree = "<group>";
@@ -317,14 +294,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				225E4C0823161A1D00C5443B /* 20404ec8f520850a1.jpg in Resources */,
-				229E5D6523164F0D00E3F819 /* IMG_9698.JPG in Resources */,
-				225E4C0C23161AE600C5443B /* 中通万家-操作平台改.jpg in Resources */,
-				225E4C1023161D2E00C5443B /* IMG_5005.JPG in Resources */,
 				225E4BE02314FE4100C5443B /* LaunchScreen.storyboard in Resources */,
-				225E4C0A23161A2A00C5443B /* 1511874948163.jpg in Resources */,
-				225E4C0E23161CF900C5443B /* IMG_9165.JPG in Resources */,
-				225E4C06231619E300C5443B /* IMG_0594.PNG in Resources */,
 				225E4BDD2314FE4100C5443B /* Assets.xcassets in Resources */,
 				225E4BDB2314FE3E00C5443B /* Main.storyboard in Resources */,
 			);
@@ -422,9 +392,9 @@
 			files = (
 				229E5D7A231670A300E3F819 /* PhotoBrowserViewController.m in Sources */,
 				225E4BD82314FE3E00C5443B /* ViewController.m in Sources */,
-				229E5D682316607500E3F819 /* UIImage+Luban_iOS_Extension_h.m in Sources */,
 				225E4BE32314FE4100C5443B /* main.m in Sources */,
 				229E5D80231679F600E3F819 /* UIImage+WXImageCompress.m in Sources */,
+				229E5DC12317A31E00E3F819 /* UIImage+ImageCompress.m in Sources */,
 				225E4BD52314FE3E00C5443B /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -601,7 +571,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = 7XTNH83NFD;
 				INFOPLIST_FILE = ImageCompress/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -609,7 +579,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = zto.ImageCompress;
+				PRODUCT_BUNDLE_IDENTIFIER = gcz.ImageCompress;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ImageCompress/ImageCompress-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -625,7 +595,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
+				DEFINES_MODULE = NO;
 				DEVELOPMENT_TEAM = 7XTNH83NFD;
 				INFOPLIST_FILE = ImageCompress/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -633,7 +603,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = zto.ImageCompress;
+				PRODUCT_BUNDLE_IDENTIFIER = gcz.ImageCompress;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "ImageCompress/ImageCompress-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

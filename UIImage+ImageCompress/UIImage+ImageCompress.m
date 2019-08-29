@@ -1,28 +1,76 @@
 //
-//  UIImage+Luban_iOS_Extension_h.m
-//  Luban-iOS
+//  UIImage+ImageCompress.m
+//  ImageCompress
 //
-//  Created by guo on 2017/7/20.
-//  Copyright © 2017年 guo. All rights reserved.
+//  Created by 龚潮中 on 2019/8/29.
+//  Copyright © 2019 龚潮中. All rights reserved.
 //
 
 #import <objc/runtime.h>
-#import "UIImage+Luban_iOS_Extension_h.h"
-
-@implementation UIImage (Luban_iOS_Extension_h)
+#import "UIImage+ImageCompress.h"
 
 static char isCustomImage;
 static char customImageName;
 
-+ (NSData *)lubanCompressImage:(UIImage *)image {
-    return [self lubanCompressImage:image withMask:nil];
+@implementation UIImage (ImageCompress)
+
+//压缩图片
++ (NSData *)compressImage:(UIImage *)image {
+    return [self compressImage:image withMask:nil];
 }
-+ (NSData *)lubanCompressImage:(UIImage *)image withMask:(NSString *)maskName {
+//指定图片大小压缩图片（单位是KB，图片指定过小会失真）
++ (NSData *)compressImage:(UIImage *)image maxSize:(NSInteger)maxSize {
+    //先判断当前质量是否满足要求，不满足再压缩
+    __block NSData *finallImageData = UIImageJPEGRepresentation(image, 1.0);
+    NSInteger sizeOrigin = finallImageData.length;
+    NSInteger sizeOriginKB = sizeOrigin/1024;
+    if (sizeOriginKB <= maxSize) {
+        return finallImageData;
+    }
+    //获取原图片的宽高比
+    CGFloat sourceImageAspectRatio = image.size.width/image.size.height;
+    //先调整分辨率
+    CGSize defaultSize = CGSizeMake(1024, 1024/sourceImageAspectRatio);
+    UIImage *newImage = [self newSizeImage:defaultSize image:image];
+    finallImageData = UIImageJPEGRepresentation(newImage, 1.0);
+    
+    //保存压缩系数
+    NSMutableArray *compressionQualityArr = [NSMutableArray array];
+    CGFloat avg = 1.0/250;
+    CGFloat value = avg;
+    for (int i = 250; i >= 1; i--) {
+        value = i * avg;
+        [compressionQualityArr addObject:@(value)];
+    }
+    /*
+     调整大小
+     说明：压缩系数数组compressionQualityArr是从大到小存储。
+     */
+    //思路：使用二分法搜索
+    finallImageData = [self halfFuntion:compressionQualityArr image:newImage sourceData:finallImageData maxSize:maxSize];
+    //如果还是未能压缩到指定大小，则进行降分辨率
+    while (finallImageData.length/1024 > maxSize) {
+        //每次降100分辨率
+        CGFloat reduceWidth = 100.0;
+        CGFloat reduceHeight = 100.0/sourceImageAspectRatio;
+        if (defaultSize.width - reduceWidth <= 0 || defaultSize.height - reduceHeight <= 0) {
+            break;
+        }
+        defaultSize = CGSizeMake(defaultSize.width - reduceWidth, defaultSize.height - reduceHeight);
+        UIImage *image = [self newSizeImage:defaultSize image:[UIImage imageWithData:UIImageJPEGRepresentation(newImage, [[compressionQualityArr lastObject] floatValue])]];
+//        finallImageData = [self halfFuntion:compressionQualityArr image:image sourceData:UIImageJPEGRepresentation(image, 1.0) maxSize:maxSize];
+        finallImageData = UIImageJPEGRepresentation(image, [[compressionQualityArr lastObject] floatValue]);
+    }
+    return finallImageData;
+    
+}
+//带水印文字压缩天
++ (NSData *)compressImage:(UIImage *)image withMask:(NSString *)maskName {
     
     double size;
     NSData *imageData = UIImageJPEGRepresentation(image, 1);
     
-    NSLog(@"Luban-iOS image data size before compressed == %f Kb",imageData.length/1024.0);
+    NSLog(@"image data size before compressed == %f Kb",imageData.length/1024.0);
     
     int fixelW = (int)image.size.width;
     int fixelH = (int)image.size.height;
@@ -81,14 +129,14 @@ static char customImageName;
     }
     return [self compressWithImage:image thumbW:thumbW thumbH:thumbH size:size withMask:maskName];
 }
-
-+ (NSData *)lubanCompressImage:(UIImage *)image withCustomImage:(NSString *)imageName {
+//添加水印图片压缩图片
++ (NSData *)compressImage:(UIImage *)image withCustomImage:(NSString *)imageName {
     
     if (imageName) {
         objc_setAssociatedObject(self, &isCustomImage, @(1), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
         objc_setAssociatedObject(self, &customImageName, imageName, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     }
-    return [self lubanCompressImage:image withMask:nil];
+    return [self compressImage:image withMask:nil];
 }
 
 + (NSData *)compressWithImage:(UIImage *)image thumbW:(int)width thumbH:(int)height size:(double)size withMask:(NSString *)maskName {
@@ -109,7 +157,7 @@ static char customImageName;
         lenght       = imageData.length;
         thumbImage   = [UIImage imageWithData:imageData];
     }
-    NSLog(@"Luban-iOS image data size after compressed ==%f kb",imageData.length/1024.0);
+    NSLog(@"image data size after compressed ==%f kb",imageData.length/1024.0);
     return imageData;
 }
 
@@ -262,7 +310,7 @@ static char customImageName;
     
     // Set the text attributes
     NSDictionary *attributes = @{NSForegroundColorAttributeName:colour,
-                                            NSFontAttributeName:font};
+                                 NSFontAttributeName:font};
     // Save the context
     CGContextSaveGState(context);
     // Undo the inversion of the Y-axis (or the text goes backwards!)
@@ -296,6 +344,61 @@ static char customImageName;
     
     // Restore the context
     CGContextRestoreGState(context);
+}
+
+//调整图片分辨率（等比例缩放）
++ (UIImage *)newSizeImage:(CGSize)size image:(UIImage *)sourceImage {
+    CGSize newSize = CGSizeMake(sourceImage.size.width, sourceImage.size.height);
+    CGFloat tempH = newSize.height / size.height;
+    CGFloat tempW = newSize.width / size.width;
+    if (tempW > 1.0 && tempW > tempH) {
+        newSize = CGSizeMake(sourceImage.size.width/tempW, sourceImage.size.height/tempW);
+    } else if (tempH > 1.0 && tempW < tempH) {
+        newSize = CGSizeMake(sourceImage.size.width/tempH, sourceImage.size.height/tempH);
+    }
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 1);
+    [sourceImage drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return newImage;
+}
+//二分法
++ (NSData *)halfFuntion:(NSArray *)arr image:(UIImage *)image sourceData:(NSData *)finallImageData maxSize:(NSInteger)maxSize {
+    NSData *tempData = [NSData data];
+    NSUInteger start = 0;
+    NSUInteger end = arr.count - 1;
+    NSUInteger index = 0;
+    NSUInteger difference = NSIntegerMax;
+    while (start <= end) {
+        index = start + (end - start)/2;
+        finallImageData = UIImageJPEGRepresentation(image, [arr[index] floatValue]);
+        NSUInteger sizeOrigin = finallImageData.length;
+        NSUInteger sizeOriginKB = sizeOrigin / 1024;
+        NSLog(@"当前降到的质量：%ld", (unsigned long)sizeOriginKB);
+        NSLog(@"\nstart：%zd\nend：%zd\nindex：%zd\n压缩系数：%lf", start, end, (unsigned long)index, [arr[index] floatValue]);
+        
+        if (sizeOriginKB > maxSize) {
+            start = index + 1;
+        } else if (sizeOriginKB < maxSize) {
+            if (maxSize - sizeOriginKB < difference) {
+                difference = maxSize - sizeOriginKB;
+                tempData = finallImageData;
+            }
+            if (index <= 0) {
+                break;
+            }
+            end = index - 1;
+        } else {
+            break;
+        }
+        if ([arr[index] floatValue] < 0.02) {//压缩系数小于0.02时基本不再进行压缩，可以终止循环
+            break;
+        }
+    }
+    if (tempData.length == 0) {
+        tempData = finallImageData;
+    }
+    return tempData;
 }
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "UIImage+Luban_iOS_Extension_h.h"
+#import "UIImage+ImageCompress.h"
 #import "PhotoBrowserViewController.h"
 #import "UIImage+WXImageCompress.h"
 
@@ -30,20 +30,6 @@
     
     self.picker.delegate = self;
     self.picker.allowsEditing = YES;
-    
-//    HH *hh = [[HH alloc] init];
-    
-//    UIImage *sourceImage = [UIImage imageNamed:@"IMG_9698.JPG"];
-//    NSData *newImageData = [self resetSizeOfImageData:sourceImage maxSize:30];
-//    NSUInteger sizeOriginKB = newImageData.length / 1024;
-
-    
-//    NSLog(@"新图片降到的质量：%ld", (unsigned long)sizeOriginKB);
-//    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageWithData:newImageData]];
-//    imageView.center = self.view.center;
-//    imageView.frame = self.view.frame;
-//    [self.view addSubview:imageView];
-
 }
 - (IBAction)photoButton:(UIButton *)sender {
     
@@ -83,28 +69,16 @@
     }
 }
 - (IBAction)compressImage:(UIButton *)sender {
-    NSData *newImageData = [self resetSizeOfImageData:self.imageView.image maxSize:10];
-    NSData *finallImageData = UIImageJPEGRepresentation(self.imageView.image, 1.0);
-    NSInteger sizeOrigin = finallImageData.length;
-    NSInteger sizeOriginKB = sizeOrigin/1024;
-    NSLog(@"查看图片大小是否有变化：%lu", sizeOriginKB);
-    
-        NSUInteger sizeOriginKBN = newImageData.length / 1024;
-    
-    
-        NSLog(@"二分法新图片降到的质量：%ld", (unsigned long)sizeOriginKBN);
+    NSData *newImageData = [UIImage compressImage:self.imageView.image maxSize:10];
+    NSUInteger sizeOriginKBN = newImageData.length / 1024;
+    NSLog(@"二分法新图片降到的质量：%ld", (unsigned long)sizeOriginKBN);
     self.compressImageView.image = [UIImage imageWithData:newImageData];
     [self saveImageToPhotos:self.compressImageView.image];
 
 }
 - (IBAction)lubanCompress:(id)sender {
-    
-    NSData *finallImageData = UIImageJPEGRepresentation(self.imageView.image, 1.0);
-    NSInteger sizeOrigin = finallImageData.length;
-    NSInteger sizeOriginKB = sizeOrigin/1024;
-    NSLog(@"查看图片大小是否有变化：%lu", sizeOriginKB);
 
-    NSData *newImageData = [UIImage lubanCompressImage:self.imageView.image];
+    NSData *newImageData = [UIImage compressImage:self.imageView.image];
     
     NSUInteger sizeOriginKBN = newImageData.length / 1024;
     
@@ -149,103 +123,6 @@
         _picker = [[UIImagePickerController alloc]init];
     }
     return _picker;
-}
-
-- (NSData *)resetSizeOfImageData:(UIImage *)sourceImage maxSize:(NSInteger)maxSize {
-  //先判断当前质量是否满足要求，不满足再压缩
-    __block NSData *finallImageData = UIImageJPEGRepresentation(sourceImage, 1.0);
-    NSInteger sizeOrigin = finallImageData.length;
-    NSInteger sizeOriginKB = sizeOrigin/1024;
-    if (sizeOriginKB <= maxSize) {
-        return finallImageData;
-    }
-    //获取原图片的宽高比
-    CGFloat sourceImageAspectRatio = sourceImage.size.width/sourceImage.size.height;
-    //先调整分辨率
-    CGSize defaultSize = CGSizeMake(1024, 1024/sourceImageAspectRatio);
-    UIImage *newImage = [self newSizeImage:defaultSize image:sourceImage];
-    finallImageData = UIImageJPEGRepresentation(newImage, 1.0);
-    
-    //保存压缩系数
-    NSMutableArray *compressionQualityArr = [NSMutableArray array];
-    CGFloat avg = 1.0/250;
-    CGFloat value = avg;
-    for (int i = 250; i >= 1; i--) {
-        value = i * avg;
-        [compressionQualityArr addObject:@(value)];
-    }
-    /*
-    调整大小
-    说明：压缩系数数组compressionQualityArr是从大到小存储。
-     */
-    //思路：使用二分法搜索
-    finallImageData = [self halfFuntion:compressionQualityArr image:newImage sourceData:finallImageData maxSize:maxSize];
-    //如果还是未能压缩到指定大小，则进行降分辨率
-    while (finallImageData.length/1024 > maxSize) {
-        //每次降100分辨率
-        CGFloat reduceWidth = 100.0;
-        CGFloat reduceHeight = 100.0/sourceImageAspectRatio;
-        if (defaultSize.width - reduceWidth <= 0 || defaultSize.height - reduceHeight <= 0) {
-            break;
-        }
-        defaultSize = CGSizeMake(defaultSize.width - reduceWidth, defaultSize.height - reduceHeight);
-        UIImage *image = [self newSizeImage:defaultSize image:[UIImage imageWithData:UIImageJPEGRepresentation(newImage, [[compressionQualityArr lastObject] floatValue])]];
-        finallImageData = [self halfFuntion:compressionQualityArr image:image sourceData:UIImageJPEGRepresentation(image, 1.0) maxSize:maxSize];
-    }
-    return finallImageData;
-
-}
-
-//调整图片分辨率（等比例缩放）
-- (UIImage *)newSizeImage:(CGSize)size image:(UIImage *)sourceImage {
-    CGSize newSize = CGSizeMake(sourceImage.size.width, sourceImage.size.height);
-    CGFloat tempH = newSize.height / size.height;
-    CGFloat tempW = newSize.width / size.width;
-    if (tempW > 1.0 && tempW > tempH) {
-        newSize = CGSizeMake(sourceImage.size.width/tempW, sourceImage.size.height/tempW);
-    } else if (tempH > 1.0 && tempW < tempH) {
-        newSize = CGSizeMake(sourceImage.size.width/tempH, sourceImage.size.height/tempH);
-    }
-    UIGraphicsBeginImageContextWithOptions(newSize, NO, 1);
-    [sourceImage drawInRect:CGRectMake(0, 0, newSize.width, newSize.height)];
-    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return newImage;
-}
-//二分法
-- (NSData *)halfFuntion:(NSArray *)arr image:(UIImage *)image sourceData:(NSData *)finallImageData maxSize:(NSInteger)maxSize {
-    NSData *tempData = [NSData data];
-    NSUInteger start = 0;
-    NSUInteger end = arr.count - 1;
-    NSUInteger index = 0;
-    NSUInteger difference = NSIntegerMax;
-    while (start <= end) {
-        index = start + (end - start)/2;
-        finallImageData = UIImageJPEGRepresentation(image, [arr[index] floatValue]);
-        NSUInteger sizeOrigin = finallImageData.length;
-        NSUInteger sizeOriginKB = sizeOrigin / 1024;
-        NSLog(@"当前降到的质量：%ld", (unsigned long)sizeOriginKB);
-        NSLog(@"\nstart：%zd\nend：%zd\nindex：%zd\n压缩系数：%lf", start, end, (unsigned long)index, [arr[index] floatValue]);
-
-        if (sizeOriginKB > maxSize) {
-            start = index + 1;
-        } else if (sizeOriginKB < maxSize) {
-            if (maxSize - sizeOriginKB < difference) {
-                difference = maxSize - sizeOriginKB;
-                tempData = finallImageData;
-            }
-            if (index <= 0) {
-                break;
-            }
-            end = index - 1;
-        } else {
-            break;
-        }
-    }
-    if (tempData.length == 0) {
-        tempData = finallImageData;
-    }
-    return tempData;
 }
 
 #pragma mark -- UIImagePickerControllerDelegate
