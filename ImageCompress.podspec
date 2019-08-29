@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "ImageCompress"
   spec.version      = "0.0.1"
-  spec.summary      = "A short description of ImageCompress."
+spec.summary      = "一个简单的图片压缩工具"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,6 +25,7 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
+图片压缩，可以指定图片大小，可以添加水印及水印图片
                    DESC
 
   spec.homepage     = "https://github.com/GCZtian/ImageCompress"
@@ -38,8 +39,7 @@ Pod::Spec.new do |spec|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  spec.license      = "MIT (example)"
-  # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  spec.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
