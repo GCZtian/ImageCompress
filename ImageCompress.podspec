@@ -90,8 +90,12 @@ spec.summary      = "一个简单的图片压缩工具"
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
-  spec.exclude_files = "Classes/Exclude"
+  spec.source_files  = "ImageCompress", "ImageCompress/**/UIImage+WXImageCompress.{h,m}"
+spec.source_files  = "ImageCompress", "ImageCompress/**/UIImage+Luban_iOS_Extension_h.{h,m}"
+spec.source_files  = "ImageCompress", "ImageCompress/**/ViewController.{h,m}"
+
+
+  spec.exclude_files = "ImageCompress/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
 
