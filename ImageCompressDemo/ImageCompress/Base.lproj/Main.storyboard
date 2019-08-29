@@ -28,8 +28,12 @@
                                     <action selector="photoButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Ki-4c-G6E"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g4f-Nw-l0D">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="g4f-Nw-l0D">
                                 <rect key="frame" x="140" y="215" width="134" height="161"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="udj-rW-yd5" appends="YES" id="gea-8W-u1h"/>
+                                </connections>
                             </imageView>
                             <button opaque="NO" tag="10001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJc-9k-i6U">
                                 <rect key="frame" x="157" y="165" width="100" height="30"/>
@@ -146,6 +150,11 @@
                 <tapGestureRecognizer id="GMQ-5Z-6hn">
                     <connections>
                         <action selector="WXC:" destination="BYZ-38-t0r" id="HNs-mN-tge"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="udj-rW-yd5">
+                    <connections>
+                        <action selector="sourceImage:" destination="BYZ-38-t0r" id="5dg-kj-yvn"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

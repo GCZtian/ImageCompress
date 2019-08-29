@@ -98,6 +98,12 @@
     self.WXImageView.image = [UIImage imageWithData:newImageData];
     [self saveImageToPhotos:self.WXImageView.image];
 }
+- (IBAction)sourceImage:(id)sender {
+    PhotoBrowserViewController *photoBrowseVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"PhotoBrowserViewController"];
+    photoBrowseVC.imgBrowse = self.imageView.image;
+    photoBrowseVC.transitioningDelegate = self;
+    [self presentViewController:photoBrowseVC animated:YES completion:nil];
+}
 - (IBAction)erFenCompress:(id)sender {
     PhotoBrowserViewController *photoBrowseVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"PhotoBrowserViewController"];
     photoBrowseVC.imgBrowse = self.compressImageView.image;
