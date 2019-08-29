@@ -91,11 +91,7 @@ spec.summary      = "一个简单的图片压缩工具"
   #
 
   spec.source_files  = "ImageCompress", "ImageCompress/**/*.{h,m}"
-spec.source_files  = "ImageCompress", "ImageCompress/**/UIImage+Luban_iOS_Extension_h.{h,m}"
-spec.source_files  = "ImageCompress", "ImageCompress/**/ViewController.{h,m}"
-
-
-  spec.exclude_files = "ImageCompress/Exclude"
+  spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "Classes/**/*.h"
 
