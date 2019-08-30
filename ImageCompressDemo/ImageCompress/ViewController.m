@@ -69,7 +69,7 @@
     }
 }
 - (IBAction)compressImage:(UIButton *)sender {
-    NSData *newImageData = [UIImage compressImage:self.imageView.image maxSize:10];
+    NSData *newImageData = [UIImage compressImage:self.imageView.image maxSize:25];
     NSUInteger sizeOriginKBN = newImageData.length / 1024;
     NSLog(@"二分法新图片降到的质量：%ld", (unsigned long)sizeOriginKBN);
     self.compressImageView.image = [UIImage imageWithData:newImageData];

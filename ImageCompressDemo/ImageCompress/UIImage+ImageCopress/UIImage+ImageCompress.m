@@ -51,8 +51,8 @@ static char customImageName;
     //如果还是未能压缩到指定大小，则进行降分辨率
     while (finallImageData.length/1024 > maxSize) {
         //每次降100分辨率
-        CGFloat reduceWidth = 100.0;
-        CGFloat reduceHeight = 100.0/sourceImageAspectRatio;
+        CGFloat reduceWidth = 50.0;
+        CGFloat reduceHeight = 50.0/sourceImageAspectRatio;
         if (defaultSize.width - reduceWidth <= 0 || defaultSize.height - reduceHeight <= 0) {
             break;
         }
