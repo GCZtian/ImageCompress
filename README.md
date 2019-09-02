@@ -1,5 +1,52 @@
 # ImageCompress
 图片压缩
+压缩比如下表：
+
+
+
+机型
+照片获取途径
+原图大小.before
+压缩后大小.after
+
+
+
+
+6s
+拍照(竖屏)
+5.19 Mb
+86.8 Kb
+
+
+6s
+拍照(横屏)
+5.26 Mb
+29.2 Kb
+
+
+7plus
+拍照(竖屏)
+8.05 Mb
+229.1 Kb
+
+
+7plus
+拍照(横屏)
+6.34 Mb
+39.6 Kb
+
+
+6s
+截屏
+1.05 Mb
+53.56 Kb
+
+
+7plus
+截屏
+234.7 Kb
+37.5 Kb
+
 安装.Install
 
 Via CocoaPods
