@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "UIImage+ImageCompress.h"
+#import "UIImage+ImageCopress/UIImage+ImageCompress.h"
 #import "PhotoBrowserViewController.h"
 #import "UIImage+WXImageCompress.h"
 
